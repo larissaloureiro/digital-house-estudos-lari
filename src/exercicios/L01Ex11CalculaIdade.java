@@ -1,7 +1,6 @@
 package exercicios;
 
 import java.util.Calendar;
-import java.util.Date;
 import java.util.Scanner;
 
 public class L01Ex11CalculaIdade {
