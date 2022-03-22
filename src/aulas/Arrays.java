@@ -1,6 +1,6 @@
 package aulas;
 
-public class arrays {
+public class Arrays {
 
 	public static void main(String[] args) {
 		
