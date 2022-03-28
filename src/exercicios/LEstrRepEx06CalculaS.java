@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class LEstrRepEx06CalculaS {
 
 	public static void main(String[] args) {
-		// Faça um programa que leia um número de termos e um valor positivo para X, calcule
-		// e mostre o valor da série a seguir:
+		// Faï¿½a um programa que leia um nï¿½mero de termos e um valor positivo para X, calcule
+		// e mostre o valor da sï¿½rie a seguir:
 		// S = - (x^2 / 1!) + (x^3 / 2!) - (x^4 / 3!) + (x^5 / 4!) - (x^6 / 3!) + (x^7 / 2!) - (x^8 / 1!) + (x^9 / 2!) - (x^10 / 3!) + (x^11 / 4!) 
 		
 		Scanner scanner = new Scanner(System.in);
@@ -53,7 +53,6 @@ public class LEstrRepEx06CalculaS {
 		
 		System.out.println("S = " + valorS);
 		
-
 	}
 
 }
