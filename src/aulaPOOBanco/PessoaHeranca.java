@@ -6,7 +6,7 @@ public class PessoaHeranca {
 	private String telefone;
 	
 	
-	//Construtores
+	// Construtores
 	public PessoaHeranca() {
 		//método construtor default = preenchimento dos atributos é opcional.
 	}

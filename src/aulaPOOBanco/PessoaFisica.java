@@ -6,7 +6,7 @@ public class PessoaFisica extends PessoaHeranca {
 	private String profissao;
 	
 	
-	//Construtores
+	// Construtores
 	public PessoaFisica() {
 		super();
 	}
