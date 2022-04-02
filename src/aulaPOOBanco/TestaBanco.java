@@ -1,5 +1,8 @@
 package aulaPOOBanco;
 
+import java.time.LocalDate;
+import java.util.Locale;
+
 public class TestaBanco {
 	public static void main(String[] args) {
 //		Pessoa pessoaNumero1 = new Pessoa(); //criar uma instância = cópia
@@ -64,20 +67,43 @@ public class TestaBanco {
 //		System.out.printf("Saldo Atual %s: R$ %.2f \n", conta1.getTitular().getNome(), conta1.getSaldo());
 //		System.out.printf("Saldo Atual João dos Tomates: R$ %.2f \n", conta2.getSaldo());
 		
-		System.out.println("Teste Conta Corrente:");
-		ContaCorrente cc1 = new ContaCorrente();
-		cc1.depositar(1000.00);
-		System.out.println("Saldo: " + cc1.getSaldo());
-		System.out.println("Limite: " + cc1.getLimite());
-
-		boolean resposta = cc1.sacar(1500.0);
-		if (resposta) {
-			System.out.printf("Saque efetuado");
+//		System.out.println("Teste Conta Corrente:");
+//		ContaCorrente cc1 = new ContaCorrente();
+//		cc1.depositar(1000.00);
+//		System.out.println("Saldo: " + cc1.getSaldo());
+//		System.out.println("Limite: " + cc1.getLimite());
+//
+//		boolean resposta = cc1.sacar(1500.0);
+//		if (resposta) {
+//			System.out.printf("Saque efetuado");
+//		} else {
+//			System.out.println("Saque não pode ser efetuado");
+//		}
+//		
+//		System.out.println("Saldo com Limite: " + cc1.getSaldoComLimite());
+//		System.out.println("Saldo: " + cc1.getSaldo());
+		
+		Locale.setDefault(new Locale ("pt", "BR")); // Serve para impressão de data e moeda de acordo com o país
+		Gerente funcionario = new Gerente("Maria das Batatas", "001.122.334-45", "87759", 2500.0, LocalDate.now());
+		System.out.println(funcionario.toString());
+		
+		if (funcionario.setUsuario("usuariopadrao", "admin")) {
+			System.out.println("Usuário alterado com sucesso");
 		} else {
-			System.out.println("Saque não pode ser efetuado");
+			System.out.println("Usuário não pôde ser alterado.");
 		}
 		
-		System.out.println("Saldo com Limite: " + cc1.getSaldoComLimite());
-		System.out.println("Saldo: " + cc1.getSaldo());
+		if (funcionario.setSenha("mudar123", "admin123")) {
+			System.out.println("Senha alterada com sucesso");
+		} else {
+			System.out.println("Senha não pôde ser alterada.");
+		}
+		
+		boolean resposta = funcionario.autenticarSistema("admin", "admin123");
+		if (resposta) {
+			System.out.println("Bem-vindo(a) " + funcionario.getNome());
+		} else {
+			System.out.println("Usuário e/ou Senha incorreta");
+		}
 	}
 }
