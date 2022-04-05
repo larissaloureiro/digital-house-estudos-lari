@@ -10,7 +10,7 @@ public interface AcessoInterno {
 	 * @return retorna verdadeiro quando a senha estiver correta.
 	 */
 	public boolean autenticarSistema(String usuario, String senha);
-	public boolean setUsuario(String usuario, String novoUsuario);
-	public boolean setSenha(String senha, String novaSenha);
+	public boolean mudarUsuario(String usuarioAntigo, String novoUsuario);
+	public boolean mudarSenha(String senhaAntiga, String novaSenha);
 
 }

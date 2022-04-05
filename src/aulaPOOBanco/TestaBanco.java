@@ -87,13 +87,13 @@ public class TestaBanco {
 		Gerente funcionario = new Gerente("Maria das Batatas", "001.122.334-45", "87759", 2500.0, LocalDate.now());
 		System.out.println(funcionario.toString());
 		
-		if (funcionario.setUsuario("usuariopadrao", "admin")) {
+		if (funcionario.mudarUsuario("usuariopadrao", "admin")) {
 			System.out.println("Usuário alterado com sucesso");
 		} else {
 			System.out.println("Usuário não pôde ser alterado.");
 		}
 		
-		if (funcionario.setSenha("mudar123", "admin123")) {
+		if (funcionario.mudarSenha("mudar123", "admin123")) {
 			System.out.println("Senha alterada com sucesso");
 		} else {
 			System.out.println("Senha não pôde ser alterada.");

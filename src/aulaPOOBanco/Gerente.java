@@ -33,8 +33,8 @@ public class Gerente extends Funcionario implements AcessoInterno {
 	}
 	
 	@Override
-	public boolean setUsuario(String usuario, String novoUsuario) { // Usuario pode ter até 12 caracteres
-		if (this.usuario.equals(usuario) && novoUsuario.length() <= 12) {
+	public boolean mudarUsuario(String usuarioAntigo, String novoUsuario) { // Usuario pode ter até 12 caracteres
+		if (this.usuario.equals(usuarioAntigo) && novoUsuario.length() <= 12) {
 			this.usuario = novoUsuario;
 			return true;
 		}
@@ -42,8 +42,8 @@ public class Gerente extends Funcionario implements AcessoInterno {
 	}
 	
 	@Override
-	public boolean setSenha(String senha, String novaSenha) { //Senha pode ter até 8 caracteres.
-		if (this.senha.equals(senha) && novaSenha.length() <= 8) {
+	public boolean mudarSenha(String senhaAntiga, String novaSenha) { //Senha pode ter até 8 caracteres.
+		if (this.senha.equals(senhaAntiga) && novaSenha.length() <= 8) {
 			this.senha = novaSenha;
 			return true;
 		}
