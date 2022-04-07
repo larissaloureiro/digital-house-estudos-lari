@@ -1,5 +1,7 @@
 package aulas;
 
+import aulaTratamentoExceptions.TratamentoDeOutrasExceptions;
+
 public class ExpressoesRegulares2 {
 	
 	private String ddd;
@@ -7,13 +9,13 @@ public class ExpressoesRegulares2 {
 	
 	public ExpressoesRegulares2(String ddd, String numero) {
 		if (ddd == null || numero == null) {
-			System.out.println("Telefone Inválido.");
+			throw new TratamentoDeOutrasExceptions("Telefone Inválido.");
 		}
 		if (!ddd.matches("\\d{2}")) {
-			System.out.println("DDD Inválido");
+			throw new IllegalArgumentException("DDD Inválido");
 		}
 		if (!numero.matches("\\d{8}|\\d{9}")) {
-			System.out.println("Número Inválido");
+			throw new IllegalArgumentException("Número Inválido");
 		}
 		this.ddd = ddd;
 		this.numero = numero;

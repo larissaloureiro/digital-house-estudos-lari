@@ -7,9 +7,7 @@ public class ExpressoesRegulares {
 	
 	public ExpressoesRegulares (String email) {
 		if (email == null || ! email.matches("^[a-zA-Z0-9._]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$")) {
-			System.out.println("Email inválido.");
-		} else {
-			System.out.println("Email válido.");
+			throw new IllegalArgumentException("Email inválido");
 		}
 		this.email = email;
 	}
