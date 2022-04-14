@@ -26,17 +26,20 @@ public class TesteStreams {
 		// Contador
 		System.out.println("Total de estudantes da lista: " + estudantes.stream().count());
 		
-		// Saber qual o maior nome da lista
+		// . max -> Saber qual o maior nome da lista
 		System.out.println("Maior nome: " + estudantes.stream()
 			.max(Comparator.comparingInt(String::length))
 		);
 		
-		// Saber qual o menor nome da lista
+		// .min -> Saber qual o menor nome da lista
 		System.out.println("Menor nome: " + estudantes.stream()
 			.min(Comparator.comparingInt(String::length))
 		);
 		
-		// Saber qual o menor nome da lista
+		// .toLowerCase -> Transforma a string toda em letras minusculas
+		// .filter -> Retorna os valores que atendem às condicoes estabelecidas 
+		// .contains -> Verifica se a string contem a sequencia de caracteres indicada (no caso do exemplo, a letra "r")
+		// .collect(Collectors.toList()) -> Coleta o resultado das operações na stream em uma List
 		System.out.println("Nomes que contem R: " + estudantes.stream()
 			.filter((estudante) -> estudante.toLowerCase().contains("r"))
 			.collect(Collectors.toList())
@@ -48,20 +51,20 @@ public class TesteStreams {
 			.collect(Collectors.toList())
 		);
 		
-		// Retorna um valor booleano de acordo com o criterio da busca
-		// Retorna true se todos os elementos tem a letra
+		// .allMatch -> Retorna true se todos os elementos atendem ao criterio da busca
+		// No exemplo: Retorna true se todos os elementos tem a letra q
 		System.out.println("Possui a letra q em todos os nomes? " + estudantes.stream()
 			.allMatch((elemento) -> elemento.contains("q"))
 		);
 		
-		// Retorna um valor booleano de acordo com o criterio da busca
-		// Retorna true se um dos elementos tem a letra
+		// .anyMatch -> Retorna true se pelo menos um dos elementos atende ao criterio da busca
+		// No exemplo: Retorna true se um dos elementos tem a letra a
 		System.out.println("Alguem possui a letra a no nome? " + estudantes.stream()
 			.anyMatch((elemento) -> elemento.contains("a"))
 		);
 		
-		// Retorna um valor booleano de acordo com o criterio da busca
-		// Retorna true se nenhum elemento tem a letra
+		// .noneMatch -> Retorna true se nenhum dos elementos atende ao criterio da busca
+		// No exemplo: Retorna true se nenhum elemento tem a letra w
 		System.out.println("Ninguem possui a letra w no nome? " + estudantes.stream()
 			.noneMatch((elemento) -> elemento.contains("w"))
 		);
