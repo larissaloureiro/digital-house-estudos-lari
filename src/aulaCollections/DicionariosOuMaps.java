@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class TesteMaps {
+public class DicionariosOuMaps {
 
 	public static void main(String[] args) {
 		Map<String, Integer> quadroMedalhasOlimpicas2020 = new HashMap<>();
@@ -17,19 +17,19 @@ public class TesteMaps {
 		quadroMedalhasOlimpicas2020.put("Grã-Bretanha", 65);
 		quadroMedalhasOlimpicas2020.put("Brasil", 21);
 		
-		//.containsKey -> Buscar através de uma chave. Retorna true ou false.
+		// .containsKey -> Buscar através de uma chave. Retorna true ou false.
 		System.out.println(".containsKey(\"EUA\") -> " + quadroMedalhasOlimpicas2020.containsKey("EUA"));
 		
-		//.containsValue -> Buscar através de um valor. Retorna true ou false.
+		// .containsValue -> Buscar através de um valor. Retorna true ou false.
 		System.out.println(".containsValue(58) -> " + quadroMedalhasOlimpicas2020.containsValue(58));
 		
-		//.size -> Retorna o tamanho do Map.
+		// .size -> Retorna o tamanho do Map.
 		System.out.println(".size() -> " + quadroMedalhasOlimpicas2020.size());
 		
 		// .get -> Consultar o valor armazenado na chave.
 		System.out.println(".get(\"Brasil\") -> " + quadroMedalhasOlimpicas2020.get("Brasil"));
 		
-		// .remove -> Remover valores da lista. 
+		// .remove -> Remover valores do map. 
 		System.out.println(".remove(\"Brasil\") -> " + quadroMedalhasOlimpicas2020.remove("Brasil"));
 		
 		for (Map.Entry<String, Integer> entry : quadroMedalhasOlimpicas2020.entrySet()) {

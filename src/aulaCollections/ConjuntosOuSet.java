@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-public class TestaSet {
+public class ConjuntosOuSet {
 
 	public static void main(String[] args) {
 		Set<Double> notas = new HashSet<>(Arrays.asList(7.5, 8.9, 10.0, 5.5, 3.1)); //add valores
