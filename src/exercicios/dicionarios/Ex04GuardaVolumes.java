@@ -22,6 +22,7 @@ public class Ex04GuardaVolumes {
 	
 	public void mostrarPecas() {
 		volumes.forEach((chave, valor) -> System.out.println(chave + " : " + valor));
+		
 	}
 	
 	public void mostrarPecas(Integer numero) {

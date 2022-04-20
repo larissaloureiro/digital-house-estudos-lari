@@ -40,12 +40,25 @@ public class Ex04Main {
 		Ex04Roupa roupa1 = new Ex04Roupa("ABCD", "Sobretudo Preto");
 		Ex04Roupa roupa2 = new Ex04Roupa("EFGH", "Camisa Regata Branca");
 		
+		Ex04Roupa roupa3 = new Ex04Roupa("ABCD", "Short Azul");
+		Ex04Roupa roupa4 = new Ex04Roupa("EFGH", "Vestido Rosa");
+		
 		
 		Ex04GuardaVolumes guardaVolumes01 = new Ex04GuardaVolumes();
 		int identificador = guardaVolumes01.guardarPecas(new ArrayList<>(Arrays.asList(roupa1, roupa2)));
+		int identificador2 = guardaVolumes01.guardarPecas(new ArrayList<>(Arrays.asList(roupa3, roupa4)));
+				
 		System.out.println("Número de identificação: " + identificador);
 		
-		guardaVolumes01.devolverPecas(1);		
+
+		System.out.println("========================");
+		guardaVolumes01.mostrarPecas();
+		
+		System.out.println("========================");
+		guardaVolumes01.devolverPecas(identificador);
+		
+		System.out.println("========================");
+		guardaVolumes01.mostrarPecas();
 
 	}
 
